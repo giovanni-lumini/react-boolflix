@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-/* import { Link } from 'react-router-dom'; */
 
 export default function FilmList() {
 
@@ -31,8 +30,8 @@ export default function FilmList() {
                 <div className="container">
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
                         {
-                            filmData.data ?
-                                filmData.data.map(film => (
+                            filmData ?
+                                filmData.map(film => (
                                     <div className="col" key={film.id}>
                                         <div className="card text-center">
                                             <h4>{film.title}</h4>

@@ -1,4 +1,3 @@
-/* import { BrowserRouter, Routes, Route } from "react-router-dom" */
 import FilmList from "./pages/FilmList"
 /* context */
 /* import ApiContext from "./context/ApiContext" */
