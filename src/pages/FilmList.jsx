@@ -35,9 +35,10 @@ export default function FilmList() {
                                 filmData.data.map(film => (
                                     <div className="col" key={film.id}>
                                         <div className="card text-center">
-                                            <h3>{film.title}</h3>
-                                            <p>{film.overview}</p>
+                                            <h4>{film.title}</h4>
+                                            <h6>{film.original_title}</h6>
                                             <p>{film.original_lenguage}</p>
+                                            <p>{film.vote_average}</p>
                                         </div>
                                     </div>
                                 )) :
