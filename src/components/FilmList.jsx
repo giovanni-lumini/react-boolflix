@@ -3,11 +3,11 @@ import { useState, useEffect } from 'react'
 export default function FilmList() {
 
     /* const con useSate vuoto */
-    const [filmData, setFilmData] = useState({})
+    const [filmData, setFilmData] = useState(null)
 
     const url = "https://api.themoviedb.org/3/search/movie?api_key=562680e6b977144414885873994b4099&query=ritorno+al+futuro"
 
-    /*funzione per la chiamata API fetch */
+    /*funzione 1 per la chiamata API fetch */
     function fetchData() {
         fetch(url)
             .then(resp => resp.json())
@@ -17,7 +17,7 @@ export default function FilmList() {
             })
     }
 
-    /* funzione che richiama la chiamata API, da inserire nell'onClick del button */
+    /* funzione 2 che esegue la funzione 1 (inserire nell'onClick del button) */
     function handleClick(e) {
         fetchData()
     }

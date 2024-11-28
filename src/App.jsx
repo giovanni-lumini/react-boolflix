@@ -1,4 +1,4 @@
-import FilmList from "./pages/FilmList"
+import FilmList from "./components/FilmList"
 /* context */
 import ApiContext from "./context/ApiContext"
 
