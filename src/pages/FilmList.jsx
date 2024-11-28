@@ -24,29 +24,29 @@ export default function FilmList() {
 
     return (
         <>
+            {/* button */}
             <button className="btn btn-outline-success" type="button" onClick={handleClick}>Search</button>
 
+            {/* film section */}
             <section className="film">
                 <div className="container">
                     <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-                        {
-                            filmData ?
-                                filmData.map(film => (
-                                    <div className="col" key={film.id}>
-                                        <div className="card text-center">
-                                            <h4>{film.title}</h4>
-                                            <h6>{film.original_title}</h6>
-                                            <p>{film.original_lenguage}</p>
-                                            <p>{film.vote_average}</p>
-                                        </div>
+                        {filmData ?
+                            filmData.map(film => (
+                                <div className="col" key={film.id}>
+                                    <div className="card text-center">
+                                        <h4>{film.title}</h4>
+                                        <h6>{film.original_title}</h6>
+                                        <p>{film.original_lenguage}</p>
+                                        <p>{film.vote_average}</p>
                                     </div>
-                                )) :
-                                <p>No results yet</p>
+                                </div>
+                            )) :
+                            <p>No results yet</p>
                         }
                     </div>
                 </div>
             </section >
         </>
     )
-
 }

@@ -1,12 +1,12 @@
 import FilmList from "./pages/FilmList"
 /* context */
-/* import ApiContext from "./context/ApiContext" */
+import ApiContext from "./context/ApiContext"
 
 import './App.css'
 
 function App() {
 
-  /* const film = ""; */
+  const film = "";
 
   return (
     <>
