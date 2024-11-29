@@ -1,5 +1,5 @@
 //importo le due funzioni di GlobalContext.jsx
-import { GlobalContextProvider, useGlobalContext, MovieList } from './context/GlobalContext'
+import { GlobalContextProvider, useGlobalContext } from './context/GlobalContext'
 //css
 import './App.css'
 
