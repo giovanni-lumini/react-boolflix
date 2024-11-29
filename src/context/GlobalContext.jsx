@@ -75,5 +75,5 @@ function useGlobalContext() {
 }
 
 //esporto le due funzioni
-export default { GlobalContextProvider, useGlobalContext };
+export { GlobalContextProvider, useGlobalContext };
 
