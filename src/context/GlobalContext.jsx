@@ -1,6 +1,6 @@
 //context
 import { createContext, useContext } from "react";
-export const GlobalContext = createContext()
+const GlobalContext = createContext();
 
 //useState
 import { useState } from "react";
@@ -58,8 +58,7 @@ function GlobalContextProvider({ children }) {
         searchText,
         setSearchText,
         base_movies_api_url,
-        HandleSearchTextSubmit,
-
+        HandleSearchTextSubmit
     };
 
     return (
@@ -72,9 +71,7 @@ function GlobalContextProvider({ children }) {
 
 //non ho ben chiara questa funzione
 function useGlobalContext() {
-    return (
-        useContext(GlobalContext)
-    )
+    return useContext(GlobalContext);
 }
 
 //esporto le due funzioni
