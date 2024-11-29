@@ -74,6 +74,6 @@ function useGlobalContext() {
     return useContext(GlobalContext);
 }
 
-//esporto le due funzioni
-export { GlobalContextProvider, useGlobalContext };
+//esporto funzioni
+export { GlobalContextProvider, useGlobalContext, MovieList };
 
