@@ -31,25 +31,7 @@ function GlobalContextProvider({ children }) {
             })
     }
 
-    function MovieList() {
-        //non ho ben chiara questa costante
-        const { movies } = useGlobalContext()
-        console.log(movies);
 
-        return (
-            //markup e map per ciclare nell'array di film
-            <ul className="movie-list">
-                {movies && movies.map((movie, index) => (
-                    <li key={index} style={{ borderBottom: "2px solid black", marginBottom: "1rem" }}>
-                        {movie.title} <br />
-                        {movie.original_title} <br />
-                        {movie.original_lenguage} <br />
-                        {movie.vote_average} <br />
-                    </li>
-                ))}
-            </ul>
-        )
-    }
 
     //costante con costanti che devono essere accessibili al children tramite <GlobalContext.Provider value={values}>
     const values = {
@@ -58,7 +40,8 @@ function GlobalContextProvider({ children }) {
         searchText,
         setSearchText,
         base_movies_api_url,
-        HandleSearchTextSubmit
+        HandleSearchTextSubmit,
+        MovieList
     };
 
     return (
@@ -69,11 +52,31 @@ function GlobalContextProvider({ children }) {
     )
 }
 
+function MovieList() {
+    //non ho ben chiara questa costante
+    const { movies } = useGlobalContext()
+    console.log(movies);
+
+    return (
+        //markup e map per ciclare nell'array di film
+        <ul className="movie-list">
+            {movies && movies.map((movie, index) => (
+                <li key={index} style={{ borderBottom: "2px solid black", marginBottom: "1rem" }}>
+                    {movie.title} <br />
+                    {movie.original_title} <br />
+                    {movie.original_lenguage} <br />
+                    {movie.vote_average} <br />
+                </li>
+            ))}
+        </ul>
+    )
+}
+
 //non ho ben chiara questa funzione
 function useGlobalContext() {
     return useContext(GlobalContext);
 }
 
 //esporto funzioni
-export { GlobalContextProvider, useGlobalContext };
+export { GlobalContextProvider, useGlobalContext, MovieList };
 
